@@ -24,17 +24,17 @@ export default function Counter({
                 </div>
                 <div className="flex gap-1 text-4xl text-white p-1">
                     <button
-                        className={clsx("p-1", highlightClassName)}
-                        onClick={() => updateTally(name, 1)}
-                    >
-                        <FaPlus />
-                    </button>
-                    <button
-                        className={clsx("p-1 rounded-e-lg", highlightClassName, "disabled:opacity-50")}
+                        className={clsx("p-1", highlightClassName, "disabled:opacity-50")}
                         onClick={() => updateTally(name, -1)}
                         disabled={tally === 0}
                     >
                         <FaMinus />
+                    </button>
+                    <button
+                        className={clsx("p-1 rounded-e-lg", highlightClassName)}
+                        onClick={() => updateTally(name, 1)}
+                    >
+                        <FaPlus />
                     </button>
                 </div>
             </div>
