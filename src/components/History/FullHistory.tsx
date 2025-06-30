@@ -1,6 +1,4 @@
 import { FaTimes } from "react-icons/fa"
-import clsx from "clsx"
-import ResourceIcon from "../ResourceIcon"
 import type { HistoryItemGrouped } from "../../types"
 import HistoryListItem from "./HistoryListItem"
 
