@@ -19,24 +19,22 @@ export default function Counter({
                 <Component title={name} size={45} />
             </div>
             <div className="flex ms-4 border-2 border-white rounded-xl">
-                <div className="bg-white p-3 text-3xl text-black rounded-s-lg w-12 flex items-center justify-center">
+                <button
+                    className={clsx("p-1 m-1 rounded-s-lg text-white text-4xl", highlightClassName, "disabled:opacity-50")}
+                    onClick={() => updateTally(name, -1)}
+                    disabled={tally === 0}
+                >
+                    <FaMinus />
+                </button>
+                <div className="bg-white p-3 text-3xl text-black w-12 flex items-center justify-center">
                     {tally}
                 </div>
-                <div className="flex gap-1 text-4xl text-white p-1">
-                    <button
-                        className={clsx("p-1", highlightClassName, "disabled:opacity-50")}
-                        onClick={() => updateTally(name, -1)}
-                        disabled={tally === 0}
-                    >
-                        <FaMinus />
-                    </button>
-                    <button
-                        className={clsx("p-1 rounded-e-lg", highlightClassName)}
-                        onClick={() => updateTally(name, 1)}
-                    >
-                        <FaPlus />
-                    </button>
-                </div>
+                <button
+                    className={clsx("p-1 m-1 rounded-e-lg text-white text-4xl", highlightClassName)}
+                    onClick={() => updateTally(name, 1)}
+                >
+                    <FaPlus />
+                </button>
             </div>
         </div>
     )

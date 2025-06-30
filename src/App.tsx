@@ -2,7 +2,7 @@ import { useState } from "react"
 import Counter from "./components/Counter"
 import type { HistoryItem, Resource } from "./types"
 import { START_RESOURCES } from "./startResources"
-import History from "./components/History"
+import History from "./components/History/History"
 
 export default function App() {
   const [resources, setResources] = useState<Resource[]>(START_RESOURCES)
