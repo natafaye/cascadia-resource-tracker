@@ -1,23 +1,23 @@
-import { FaEllipsis } from "react-icons/fa6"
-import type { HistoryItem, Resource } from "../../types"
+import type { HistoryItemGrouped } from "../../types"
 import { useState } from "react"
 import FullHistory from "./FullHistory"
 import { createPortal } from "react-dom"
+import { FaList } from "react-icons/fa"
 
 type Props = {
-    historyWithResources: Array<HistoryItem & { resource: Resource }>
+    groupedHistory: HistoryItemGrouped[]
     className?: string
 }
-export default function HistoryMenu({ className, historyWithResources }: Props) {
+export default function HistoryMenu({ className, groupedHistory }: Props) {
     const [showFullHistory, setShowFullHistory] = useState(false)
     return (
         <>
             <button className={className} onClick={() => setShowFullHistory(true)}>
-                <FaEllipsis />
+                <FaList />
             </button>
             {showFullHistory && createPortal(
                 <FullHistory
-                    historyWithResources={historyWithResources}
+                    groupedHistory={groupedHistory}
                     close={() => setShowFullHistory(false)}
                 />,
                 document.body

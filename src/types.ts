@@ -12,3 +12,8 @@ export type HistoryItem = {
     name: string
     amount: number
 }
+
+export type HistoryItemGrouped = HistoryItem & {
+    resource: Resource
+    count: number
+}
