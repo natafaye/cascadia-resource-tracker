@@ -16,5 +16,6 @@
 }
 
 body {
-    background-color: #785748;
+    /* background-color: #785748; */
+    background-color: var(--color-gray-900)
 }
