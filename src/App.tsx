@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Counter from "./components/Counter"
 import type { HistoryItem, Resource } from "./types"
-import { START_RESOURCES } from "./startResources"
+import { CASCADIA_START_RESOURCES as START_RESOURCES } from "./startResources"
 import History from "./components/History/History"
 
 export default function App() {

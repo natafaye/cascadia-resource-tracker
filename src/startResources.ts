@@ -4,7 +4,7 @@ import { FaCircle } from "react-icons/fa6"
 import { IoPlanet } from "react-icons/io5"
 import { FaRocket } from "react-icons/fa6"
 
-export const START_RESOURCES: Resource[] = [
+export const SPACE_BASE_START_RESOURCES: Resource[] = [
   {
     name: "credits",
     className: "bg-yellow-500",
